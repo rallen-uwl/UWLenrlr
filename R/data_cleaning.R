@@ -20,6 +20,7 @@ format_columns <- function(df) {
 add_department_info <- function(df) {
   df %>%
     dplyr::left_join(lookup_subject_lookup, by = "subject") %>%
+    dplyr::left_join(lookup_discipline_lookup, by = "dept") %>%
     dplyr::relocate(dept, .before = subject)
 }
 
