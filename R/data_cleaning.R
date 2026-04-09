@@ -96,8 +96,8 @@ combine_slash_courses <- function(df) {
     ) %>%
     dplyr::group_by(enrl.date, subject, base.catalog.num, section) %>%
     dplyr::summarise(
-      has_4xx = dplyr::any(dplyr::between(catalog.num, 400, 499)),
-      has_5xx = dplyr::any(dplyr::between(catalog.num, 500, 599)),
+      has_4xx = any(dplyr::between(catalog.num, 400, 499)),
+      has_5xx = any(dplyr::between(catalog.num, 500, 599)),
 
       dplyr::across(dplyr::all_of(cols_to_keep), ~ dplyr::first(.x, default = NA)),
 
