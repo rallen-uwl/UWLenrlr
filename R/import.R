@@ -16,7 +16,7 @@ read_UWL_SR_DAC_SUBJECT_IR_ALL_reports <- function(path, file_pattern) {
     purrr::map_dfr(~ {
       file_name <- basename(.x)
       date <- stringr::str_extract(file_name, "\\d{4}-\\d{2}-\\d{2}")
-      readr::read_csv(.x) %>%
+      readr::read_csv(.x, guess_max = 10000) %>%
         dplyr::mutate(`Enrl Date` = as.Date(date))
     }) %>%
     format_columns %>%
