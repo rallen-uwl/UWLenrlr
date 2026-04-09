@@ -32,7 +32,7 @@ read_UWL_SR_DAC_SUBJECT_IR_ALL_reports <- function(path, file_pattern) {
         TRUE ~ acad.group
       )
     ) %>%
-    dplyr::unite("inst.name", instr.f.name, inst.l.name, sep = " ", na.rm = TRUE) %>%
+    tidyr::unite("inst.name", instr.f.name, inst.l.name, sep = " ", na.rm = TRUE) %>%
     dplyr::relocate(inst.name, .before = class.stat)
 }
 

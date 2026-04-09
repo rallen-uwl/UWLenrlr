@@ -1,6 +1,6 @@
 Package: UWLenrlr
 Title: UWL Enrollment Management
-Version: 0.0.0.9000
+Version: 0.0.0.91
 Authors@R: 
     person("Robert", "Allen", , "rallen@uwlax.edu", role = c("aut", "cre"))
 Description: Enrollment Management reporting and analysis.
@@ -14,6 +14,7 @@ Imports:
     purrr,
     readr,
     stringr,
-    tibble
+    tibble,
+    tidyr
 URL: https://github.com/rallen-uwl/UWLenrlr
 BugReports: https://github.com/rallen-uwl/UWLenrlr/issues
