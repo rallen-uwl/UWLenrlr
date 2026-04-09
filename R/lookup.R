@@ -1,7 +1,7 @@
 lookup_excluded_programs <- c("MS", "SAA", "DOS")
 
-lookup_discipline_lookup <- tibble:tibble(
-  ~dept, ~disp,
+lookup_discipline_lookup <- tibble::tribble(
+  ~dept, ~discpln,
   "ACC", "Buisness",
   "ANT", "Social Sciences",
   "ART", "Arts",
