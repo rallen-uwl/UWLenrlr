@@ -16,3 +16,5 @@ Imports:
     readr,
     stringr,
     tibble
+URL: https://github.com/rallen-uwl/UWLenrlr
+BugReports: https://github.com/rallen-uwl/UWLenrlr/issues
