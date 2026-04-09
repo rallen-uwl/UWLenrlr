@@ -21,7 +21,7 @@ add_department_info <- function(df) {
   df %>%
     dplyr::left_join(lookup_subject_lookup, by = "subject") %>%
     dplyr::left_join(lookup_discipline_lookup, by = "dept") %>%
-    dplyr::relocate(dept, .before = subject)
+    dplyr::relocate(dplyr::all_of(c("acad.group", "discpln", "dept")), .before = subject)
 }
 
 #' remove_excluded_programs_and_components
