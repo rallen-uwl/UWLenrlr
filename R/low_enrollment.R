@@ -15,9 +15,11 @@ determine_minimum_enrollment <- function(df) {
         acad.group == "CSH" & course.type %in% c("UGRAD", "SLASH") ~ 10,
         acad.group == "CSH" & course.type == "GRAD" ~ 5,
         TRUE ~ 0
-      )
+      ),
+      percent.fill = if_else(min.enrl == 0, 0, round((tot.enrl/min.enrl)*100, digits = 0))
     ) %>%
-    dplyr::relocate(min.enrl, .before = tot.enrl)
+    dplyr::relocate(min.enrl, .before = tot.enrl) %>%
+    dplyr::relocate(percent.fill, .before = tot.enrl)
 }
 
 #' get_latest_low_enrolled_classes
