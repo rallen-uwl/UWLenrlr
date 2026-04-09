@@ -1,6 +1,3 @@
-usethis::use_package("dplyr")
-usethis::use_package("magrittr")
-
 #' determine_minimum_enrollment
 #'
 #' @param df

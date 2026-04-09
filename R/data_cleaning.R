@@ -1,7 +1,3 @@
-usethis::use_package("dplyr")
-usethis::use_package("magrittr")
-usethis::use_package("stringr")
-
 #' format_columns
 #'
 #' @param df

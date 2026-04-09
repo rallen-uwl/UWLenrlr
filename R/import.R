@@ -1,9 +1,3 @@
-usethis::use_package("dplyr")
-usethis::use_package("magrittr")
-usethis::use_package("purrr")
-usethis::use_package("readr")
-usethis::use_package("stringr")
-
 #' read_UWL_SR_DAC_SUBJECT_IR_ALL_reports
 #'
 #' @param path

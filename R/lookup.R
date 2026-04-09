@@ -1,5 +1,3 @@
-usethis::use_package("tibble")
-
 lookup_excluded_programs <- c("MS", "SAA", "DOS")
 
 lookup_subject_lookup <- tibble::tribble(
