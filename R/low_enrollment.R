@@ -1,5 +1,5 @@
-use_package("dplyr")
-use_package("magrittr")
+usethis::use_package("dplyr")
+usethis::use_package("magrittr")
 
 #' determine_minimum_enrollment
 #'

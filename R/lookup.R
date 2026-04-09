@@ -1,4 +1,4 @@
-use_package("tibble")
+usethis::use_package("tibble")
 
 lookup_excluded_programs <- c("MS", "SAA", "DOS")
 
