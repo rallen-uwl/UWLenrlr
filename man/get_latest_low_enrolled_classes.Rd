@@ -7,10 +7,10 @@
 get_latest_low_enrolled_classes(df)
 }
 \arguments{
-\item{df}{}
+\item{df}{data.frame}
 }
 \value{
-data.frame with only classes below the minimum enrollment
+data.frame only classes below the minimum enrollment
 }
 \description{
 get_latest_low_enrolled_classes

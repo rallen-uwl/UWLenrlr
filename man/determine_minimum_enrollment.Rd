@@ -7,10 +7,10 @@
 determine_minimum_enrollment(df)
 }
 \arguments{
-\item{df}{}
+\item{df}{data.frame}
 }
 \value{
-df data.frame with added column min.enrl
+data.frame original data.frame with added column min.enrl
 }
 \description{
 determine_minimum_enrollment

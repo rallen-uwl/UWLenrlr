@@ -1,8 +1,8 @@
 #' determine_minimum_enrollment
 #'
-#' @param df
+#' @param df data.frame
 #'
-#' @returns df data.frame with added column min.enrl
+#' @returns data.frame original data.frame with added column min.enrl
 #' @export
 #'
 determine_minimum_enrollment <- function(df) {
@@ -22,9 +22,9 @@ determine_minimum_enrollment <- function(df) {
 
 #' get_latest_low_enrolled_classes
 #'
-#' @param df
+#' @param df data.frame
 #'
-#' @returns data.frame with only classes below the minimum enrollment
+#' @returns data.frame only classes below the minimum enrollment
 #' @export
 #'
 get_latest_low_enrolled_classes <- function(df) {
