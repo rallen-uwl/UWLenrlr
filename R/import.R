@@ -30,9 +30,10 @@ read_UWL_SR_DAC_SUBJECT_IR_ALL_reports <- function(path, file_pattern) {
         acad.group %in% c("CLS", "VPA") ~ "CASSH",
         acad.group == "SAH" ~ "CSH",
         TRUE ~ acad.group
-      )
+      ),
+      inst.name = paste0(instr.f.name, " ", inst.l.name)
     ) %>%
-    tidyr::unite("inst.name", instr.f.name, inst.l.name, sep = " ", na.rm = TRUE) %>%
+    #tidyr::unite("inst.name", instr.f.name, inst.l.name, sep = " ", na.rm = TRUE) %>%
     dplyr::relocate(inst.name, .before = class.stat)
 }
 
