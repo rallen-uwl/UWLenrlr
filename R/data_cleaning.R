@@ -6,9 +6,9 @@
 #'
 format_columns <- function(df) {
   df %>%
-    select(-all_of(starts_with("..."))) %>%
-    select_all(~ gsub("\\s+|\\.|\\..|\\...", ".", .)) %>%
-    select_all(tolower)
+    dplyr::select(-dplyr::all_of(dplyr::starts_with("..."))) %>%
+    dplyr::select_all(~ gsub("\\s+|\\.|\\..|\\...", ".", .)) %>%
+    dplyr::select_all(tolower)
 }
 
 #' add_department_info
