@@ -2,7 +2,7 @@ lookup_excluded_programs <- c("MS", "SAA", "DOS")
 
 lookup_discipline_lookup <- tibble::tribble(
   ~dept, ~discpln,
-  "ACC", "Buisness",
+  "ACC", "Business",
   "ANT", "Social Sciences",
   "ART", "Arts",
   "BIO", "Natural Sciences",
@@ -18,7 +18,7 @@ lookup_discipline_lookup <- tibble::tribble(
   "GEO", "Environmental Science",
   "HIS", "Humanities",
   "HP", "Health Sciences",
-  "IS", "Buisness",
+  "IS", "Business",
   "MGT", "Business",
   "MIC", "Natural Sciences",
   "MKT", "Business",
