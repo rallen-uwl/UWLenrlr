@@ -3,7 +3,6 @@
 #' @param manifest_file URL of manifest file
 #'
 #' @returns data.frame of all files read in manifest_file
-#' @export
 #'
 read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_URL <- function(manifest_file) {
   manifest <- readr::read_csv(manifest_file) %>%
@@ -27,7 +26,6 @@ read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_URL <- function(manifest_file) {
 #' @param file_pattern
 #'
 #' @returns data.frame of all files read in path of file_pattern format
-#' @export
 #'
 read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_locally <- function(path, file_pattern) {
   list.files(
@@ -49,7 +47,6 @@ read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_locally <- function(path, file_pattern) {
 #' @param enrollment_data data.frame of raw enrollment data
 #'
 #' @returns data.frame of imported, and cleaned, enrollment data
-#' @export
 #'
 clean_enrollment_data <- function(raw_enrollment_data) {
   raw_enrollment_data %>%
