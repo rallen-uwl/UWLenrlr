@@ -99,5 +99,4 @@ read_enrollment_data <- function(path, file_pattern) {
 read_enrollment_data_from_web <- function(manifest_file) {
   read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_URL(manifest_file) %>%
     clean_enrollment_data
-  }
 }
