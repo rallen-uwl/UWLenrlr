@@ -1,6 +1,6 @@
 Package: UWLenrlr
 Title: UWL Enrollment Management
-Version: 0.0.0.952
+Version: 0.0.0.953
 Authors@R: 
     person("Robert", "Allen", , "rallen@uwlax.edu", role = c("aut", "cre"))
 Description: Enrollment Management reporting and analysis.
