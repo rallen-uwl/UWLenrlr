@@ -6,13 +6,19 @@
 #' @export
 #'
 read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_URL <- function(manifest_file) {
-  readr::read_csv(manifest_file) %>%
-    filter(!is.na(URL)) %>%
-    select(URL, date) %>%
-    purrr::map_dfr(~ {
-      readr::read_csv(.x, guess_max = 10000) %>%
-        dplyr::mutate(`Enrl Date` = as.Date(.y))
-    })
+  manifest <- readr::read_csv(manifest_file) %>%
+    dplyr::filter(!is.na(URL)) %>%
+    dplyr::select(URL, date)
+
+  enrl <- purrr::map2(
+    manifest$URL,
+    manifest$date,
+    \(u, d) {
+      readr::read_csv(u, guess_max = 10000) %>%
+        dplyr::mutate(`Enrl Date` = as.Date(d))
+    }
+  ) %>%
+    vctrs::list_rbind()
 }
 
 #' read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_locally
