@@ -8,38 +8,11 @@ format_columns <- function(df) {
   df %>%
     dplyr::select(-dplyr::all_of(dplyr::starts_with("..."))) %>%
     dplyr::select_all(~ gsub("\\s+|\\.|\\..|\\...", ".", .)) %>%
-    dplyr::select_all(tolower)
-}
-
-#' format_csv_columns
-#'
-#' @param df
-#'
-#' @export
-#'
-format_csv_columns <- function(df) {
-  df %>%
-    format_columns %>%
+    dplyr::select_all(tolower) %>%
     dplyr::rename(
       catalog.num = `catalog.#`,
       course.topic.1 = course.topic.8,
       course.topic.2 = course.topic.9
-    )
-}
-
-#' format_feather_columns
-#'
-#' @param df
-#'
-#' @export
-#'
-format_csv_columns <- function(df) {
-  df %>%
-    format_columns %>%
-    dplyr::rename(
-      catalog.num = `catalog.#`,
-      course.topic.1 = course.topic,
-      course.topic.2 = course.topic.
     )
 }
 

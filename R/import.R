@@ -48,17 +48,9 @@ read_UWL_SR_DAC_SUBJECT_IR_ALL_reports_locally <- function(path, file_pattern) {
 #'
 #' @returns data.frame of imported, and cleaned, enrollment data
 #'
-clean_enrollment_data <- function(raw_enrollment_data, source = "csv") {
-  if(source == "csv") {
-    raw_enrollment_data <- raw_enrollment_data %>% format_csv_columns
-  } else if (source == "feather") {
-    raw_enrollment_data <- raw_enrollment_data %>% format_feather_columns
-  } else {
-    raw_enrollment_data <- raw_enrollment_data %>% format_columns
-  }
-
+clean_enrollment_data <- function(raw_enrollment_data) {
   raw_enrollment_data %>%
-  #  format_columns %>%
+    format_columns %>%
     dplyr::mutate(
       acad.group = dplyr::case_when(
         acad.group %in% c("CLS", "VPA") ~ "CASSH",
@@ -97,7 +89,7 @@ read_enrollment_data <- function(path, file_pattern) {
 #' @export
 #'
 read_pre_processed_enrollment_data <- function(file_name) {
-  arrow::read_feather(file_name) %>% clean_enrollment_data(source = "feather")
+  arrow::read_feather(file_name) %>% clean_enrollment_data
 }
 
 #' read_enrollment_data_from_web

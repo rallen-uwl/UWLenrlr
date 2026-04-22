@@ -4,7 +4,7 @@
 \alias{clean_enrollment_data}
 \title{clean_enrollment_data}
 \usage{
-clean_enrollment_data(raw_enrollment_data, source = "csv")
+clean_enrollment_data(raw_enrollment_data)
 }
 \arguments{
 \item{enrollment_data}{data.frame of raw enrollment data}
