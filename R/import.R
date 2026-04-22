@@ -86,6 +86,17 @@ read_enrollment_data <- function(path, file_pattern) {
     clean_enrollment_data
 }
 
+#' read_pre_processed_enrollment_data
+#'
+#' @param file_name
+#'
+#' @returns data.frame of imported, and cleaned, enrollment data from feather
+#' @export
+#'
+read_pre_processed_enrollment_data <- function(file_name) {
+  arrow::read_feather(file_name) %>% clean_enrollment_data
+}
+
 #' read_enrollment_data_from_web
 #'
 #' @param manifest_file URL
