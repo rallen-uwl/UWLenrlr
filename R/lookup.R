@@ -13,7 +13,7 @@ general_education_category_lookup <- tibble::tribble(
   "C5M", "Mind, Body, & Planet",
   "C5XE", "Experiential Science",
   "C6U", "The Communities of the U.S.",
-  "C6W", "The Cultures of Our World"
+  "C6W", "The Cultures of Our World",
 )
 
 lookup_discipline_lookup <- tibble::tribble(
