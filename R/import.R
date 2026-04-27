@@ -60,12 +60,13 @@ clean_enrollment_data <- function(raw_enrollment_data) {
     ) %>%
     tidyr::unite("inst.name", instr.f.name, inst.l.name, sep = " ", na.rm = TRUE) %>%
     dplyr::relocate(inst.name, .before = class.stat) %>%
-    remove_excluded_programs_and_components %>%
-    combine_duplicated_sections %>%
-    remove_associated_labs %>%
-    combine_slash_courses %>%
-    determine_minimum_enrollment %>%
-    add_department_info
+    remove_excluded_programs_and_components() %>%
+    combine_duplicated_sections() %>%
+    remove_associated_labs() %>%
+    combine_slash_courses() %>%
+    determine_minimum_enrollment() %>%
+    add_department_info() %>%
+    add_gen_ed_categories()
 }
 
 #' read_enrollment_data
