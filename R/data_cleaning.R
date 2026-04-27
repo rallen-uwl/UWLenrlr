@@ -16,6 +16,16 @@ format_columns <- function(df) {
     )
 }
 
+#' add_gen_ed_categories
+#'
+#' @param df
+#'
+#' @export
+#'
+add_gen_ed_categories <- function(df) {
+  df %>% dplyr::left_join(general_education_category_lookup, by = "gen.ed.or.writing.emphasis")
+}
+
 #' add_department_info
 #'
 #' @param df
