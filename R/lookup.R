@@ -1,5 +1,21 @@
 lookup_excluded_programs <- c("MS", "SAA", "DOS")
 
+general_education_category_lookup <- tribble(
+  ~gen.ed.or.writing.emphasis, ~gen.ed.category.name,
+  "C1Q", "Quantitative Reasoning",
+  "C2S", "Spoken Literacy",
+  "C2T", "The Stories We Tell",
+  "C2W", "Written Literacy",
+  "C3B", "Social & Behavioral Studies",
+  "C3F", "Social Foundations for Success",
+  "C4A", "Arts & Aesthetics",
+  "C4H", "The Pasts that Define Us",
+  "C5M", "Mind, Body, & Planet",
+  "C5XE", "Experiential Science",
+  "C6U", "The Communities of the U.S.",
+  "C6W", "The Cultures of Our World"
+)
+
 lookup_discipline_lookup <- tibble::tribble(
   ~dept, ~discpln,
   "ACC", "Business",
