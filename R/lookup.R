@@ -1,6 +1,6 @@
 lookup_excluded_programs <- c("MS", "SAA", "DOS")
 
-general_education_category_lookup <- tribble(
+general_education_category_lookup <- tibble::tribble(
   ~gen.ed.or.writing.emphasis, ~gen.ed.category.name,
   "C1Q", "Quantitative Reasoning",
   "C2S", "Spoken Literacy",
