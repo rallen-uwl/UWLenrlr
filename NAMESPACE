@@ -2,6 +2,7 @@
 
 export("%>%")
 export(add_department_info)
+export(add_gen_ed_categories)
 export(combine_duplicated_sections)
 export(combine_slash_courses)
 export(determine_minimum_enrollment)
